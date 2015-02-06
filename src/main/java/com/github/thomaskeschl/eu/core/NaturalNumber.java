@@ -14,4 +14,8 @@ public class NaturalNumber {
 
         this.num = num;
     }
+
+    public boolean isDivisibleBy(NaturalNumber other) {
+        return num % other.num == 0;
+    }
 }
