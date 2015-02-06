@@ -9,7 +9,7 @@ import java.util.stream.StreamSupport;
  */
 public class NaturalNumberGenerator implements Iterable<NaturalNumber> {
     private class NaturalNumberIterator implements Iterator<NaturalNumber> {
-        private int num = 0;
+        private long num = 0;
 
         /**
          * Returns {@code true} if the iteration has more elements.
@@ -20,7 +20,7 @@ public class NaturalNumberGenerator implements Iterable<NaturalNumber> {
          */
         @Override
         public boolean hasNext() {
-            return num < Integer.MAX_VALUE;
+            return num < Long.MAX_VALUE;
         }
 
         /**
