@@ -31,7 +31,7 @@ public class NaturalNumberGenerator implements Iterable<NaturalNumber> {
          */
         @Override
         public NaturalNumber next() {
-            return new NaturalNumber(++num);
+            return new NaturalNumber(num++);
         }
     }
 
