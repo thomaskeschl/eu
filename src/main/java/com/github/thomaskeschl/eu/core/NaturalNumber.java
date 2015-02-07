@@ -1,11 +1,13 @@
 package com.github.thomaskeschl.eu.core;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Represents a natural number, which is an integer in the range 0-Infinity.
  *
  * Created by tkeschl on 2/6/2015.
  */
-public class NaturalNumber {
+public class NaturalNumber implements Comparable<NaturalNumber> {
     private final long num;
 
     public NaturalNumber(long num) {
@@ -50,5 +52,10 @@ public class NaturalNumber {
         return "NaturalNumber{" +
                 "num=" + num +
                 '}';
+    }
+
+    @Override
+    public int compareTo(@NotNull NaturalNumber other) {
+        return Long.compare(num, other.num);
     }
 }
