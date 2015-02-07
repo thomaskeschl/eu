@@ -1,6 +1,8 @@
 package com.github.thomaskeschl.eu.core;
 
 /**
+ * Represents a natural number, which is an integer in the range 0-Infinity.
+ *
  * Created by tkeschl on 2/6/2015.
  */
 public class NaturalNumber {
@@ -34,9 +36,8 @@ public class NaturalNumber {
 
         NaturalNumber that = (NaturalNumber) o;
 
-        if (num != that.num) return false;
+        return num == that.num;
 
-        return true;
     }
 
     @Override

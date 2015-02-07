@@ -5,6 +5,8 @@ import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 /**
+ * Generates a stream of natural numbers, in order.
+ *
  * Created by tkeschl on 2/6/2015.
  */
 public class NaturalNumberGenerator implements Iterable<NaturalNumber> {
@@ -27,7 +29,7 @@ public class NaturalNumberGenerator implements Iterable<NaturalNumber> {
          * Returns the next element in the iteration.
          *
          * @return the next element in the iteration
-         * @throws NoSuchElementException if the iteration has no more elements
+         * @throws java.util.NoSuchElementException if the iteration has no more elements
          */
         @Override
         public NaturalNumber next() {
@@ -47,9 +49,5 @@ public class NaturalNumberGenerator implements Iterable<NaturalNumber> {
 
     public Stream<NaturalNumber> stream() {
         return StreamSupport.stream(spliterator(), false);
-    }
-
-    public Stream<NaturalNumber> parallelStream() {
-        return StreamSupport.stream(spliterator(), true);
     }
 }
