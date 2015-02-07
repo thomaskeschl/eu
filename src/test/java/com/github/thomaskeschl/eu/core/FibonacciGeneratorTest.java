@@ -20,7 +20,7 @@ public class FibonacciGeneratorTest {
 
     @Test
     public void testIteratorGeneratesFirst10FibonnacciNumbers() throws Exception {
-        List<Long> fibs = Lists.newArrayList(1L, 1L, 2L, 3L, 5L, 8L, 13L, 21L, 34L, 55L);
+        List<Long> fibs = Lists.newArrayList(1L, 2L, 3L, 5L, 8L, 13L, 21L, 34L, 55L, 89L);
         List<NaturalNumber> expected = fibs.stream().map(NaturalNumber::new).collect(Collectors.toList());
 
         List<NaturalNumber> actual = fibonacciGenerator.stream().limit(10).collect(Collectors.toList());

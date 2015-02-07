@@ -10,7 +10,7 @@ import java.util.stream.StreamSupport;
  */
 public class FibonacciGenerator implements Iterable<NaturalNumber> {
     private class FibonacciIterator implements Iterator<NaturalNumber> {
-        private long x = 0;
+        private long x = 1;
         private long y = 1;
 
         /**
