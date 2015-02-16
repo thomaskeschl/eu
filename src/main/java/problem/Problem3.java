@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * Solution for Project Euler: Problem 2 -
+ * Solution for Project Euler: Problem 3 -
  * The prime factors of 13195 are 5, 7, 13 and 29.
  * <p>
  * What is the largest prime factor of the number 600851475143 ?
