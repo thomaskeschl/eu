@@ -18,8 +18,8 @@ public class NaturalNumber implements Comparable<NaturalNumber> {
         public int compare(NaturalNumber o1, NaturalNumber o2) {
             return o1.compareTo(o2);
         }
-    }
 
+    }
     private final long num;
 
     public NaturalNumber(long num) {
@@ -37,6 +37,12 @@ public class NaturalNumber implements Comparable<NaturalNumber> {
 
     public boolean isDivisibleBy(long other) {
         return num % other == 0;
+    }
+
+    public NaturalNumber squareRoot() {
+        long result = (long) Math.sqrt(num);
+
+        return new NaturalNumber(result);
     }
 
     public long getValue() {

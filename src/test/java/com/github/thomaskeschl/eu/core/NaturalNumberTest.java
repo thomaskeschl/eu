@@ -38,4 +38,10 @@ public class NaturalNumberTest {
     public void testCompareToGreaterThan() throws Exception {
         assertEquals(1, num.compareTo(new NaturalNumber(9)));
     }
+
+    @Test
+    public void testSquareRoot() throws Exception {
+        NaturalNumber expected = new NaturalNumber(3);
+        assertEquals(expected, num.squareRoot());
+    }
 }
