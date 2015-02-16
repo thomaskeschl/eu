@@ -2,12 +2,24 @@ package com.github.thomaskeschl.eu.core;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Comparator;
+
 /**
  * Represents a natural number, which is an integer in the range 0-Infinity.
  *
  * Created by tkeschl on 2/6/2015.
  */
 public class NaturalNumber implements Comparable<NaturalNumber> {
+
+    public static enum ComparatorSingleton implements Comparator<NaturalNumber> {
+        INSTANCE;
+
+        @Override
+        public int compare(NaturalNumber o1, NaturalNumber o2) {
+            return o1.compareTo(o2);
+        }
+    }
+
     private final long num;
 
     public NaturalNumber(long num) {
