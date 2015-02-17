@@ -38,9 +38,8 @@ public class Problem3 {
     private List<NaturalNumber> generatePrimesUpTo(NaturalNumber num) {
         List<NaturalNumber> candidates = new NaturalNumberGenerator().stream()
                 .limit(num.getValue())
+                .skip(2)
                 .collect(Collectors.toList());
-
-        candidates = candidates.subList(2, candidates.size());
 
         List<NaturalNumber> primes = Lists.newArrayList();
 
