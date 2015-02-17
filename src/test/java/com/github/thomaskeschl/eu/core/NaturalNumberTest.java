@@ -44,4 +44,15 @@ public class NaturalNumberTest {
         NaturalNumber expected = new NaturalNumber(3);
         assertEquals(expected, num.squareRoot());
     }
+
+    @Test
+    public void testIsPalindrome() throws Exception {
+        NaturalNumber test = new NaturalNumber(9009);
+        assertEquals(true, test.isPalindrome());
+    }
+
+    @Test
+    public void testIsPalindromeFalseWhenNotPalindrome() throws Exception {
+        assertEquals(false, num.isPalindrome());
+    }
 }

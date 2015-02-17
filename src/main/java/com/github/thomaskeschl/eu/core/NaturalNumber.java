@@ -39,6 +39,23 @@ public class NaturalNumber implements Comparable<NaturalNumber> {
         return num % other == 0;
     }
 
+    public boolean isPalindrome() {
+        String numAsString = Long.toString(num);
+        boolean isPalindrome = true;
+        for (int i = 0; i < numAsString.length() / 2; i++) {
+            char fromFront = numAsString.charAt(i);
+
+            int j = numAsString.length() - 1 - i;
+            char fromEnd = numAsString.charAt(j);
+
+            if (fromFront != fromEnd) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        return isPalindrome;
+    }
+
     public NaturalNumber squareRoot() {
         long result = (long) Math.sqrt(num);
 
