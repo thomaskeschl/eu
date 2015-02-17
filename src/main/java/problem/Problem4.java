@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * Created by Thomas on 2/15/2015.
  */
 public class Problem4 {
-    NaturalNumber solveFor(int numDigits) {
+    public NaturalNumber solveFor(int numDigits) {
         List<NaturalNumber> range = getRange(numDigits);
         Collections.reverse(range);
 
