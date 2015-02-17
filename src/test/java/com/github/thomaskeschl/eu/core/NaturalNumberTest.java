@@ -55,4 +55,10 @@ public class NaturalNumberTest {
     public void testIsPalindromeFalseWhenNotPalindrome() throws Exception {
         assertEquals(false, num.isPalindrome());
     }
+
+    @Test
+    public void testMultiplyBy() throws Exception {
+        NaturalNumber expected = new NaturalNumber(100);
+        assertEquals(expected, num.multiplyBy(num));
+    }
 }

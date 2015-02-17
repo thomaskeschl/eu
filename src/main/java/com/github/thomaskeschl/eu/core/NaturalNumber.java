@@ -20,8 +20,8 @@ public class NaturalNumber implements Comparable<NaturalNumber> {
         }
 
     }
-    private final long num;
 
+    private final long num;
     public NaturalNumber(long num) {
         if(num < 0) {
             String message = String.format("Natural numbers cannot be less than 0! Value: %1$s", num);
@@ -62,6 +62,15 @@ public class NaturalNumber implements Comparable<NaturalNumber> {
         return new NaturalNumber(result);
     }
 
+    public NaturalNumber multiplyBy(NaturalNumber other) {
+        return new NaturalNumber(num * other.num);
+    }
+
+    @Override
+    public int compareTo(@NotNull NaturalNumber other) {
+        return Long.compare(num, other.num);
+    }
+
     public long getValue() {
         return num;
     }
@@ -87,10 +96,5 @@ public class NaturalNumber implements Comparable<NaturalNumber> {
         return "NaturalNumber{" +
                 "num=" + num +
                 '}';
-    }
-
-    @Override
-    public int compareTo(@NotNull NaturalNumber other) {
-        return Long.compare(num, other.num);
     }
 }
